@@ -9,5 +9,8 @@ export const Global = createGlobalStyle`
 html, body{
   font-family: sans-serif;
 }
+body{
+  background-color: #e3dfdf;
+}
 
 `
