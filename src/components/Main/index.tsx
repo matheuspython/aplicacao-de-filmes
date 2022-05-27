@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { filmeProps } from '../../types/filmeProps';
 import { Filme } from '../Filme';
-
-import { Container } from './styles';
-
-
+import { Container, MainField } from './styles';
 
 export const Main: React.FC = () => {
   const [filmName, setFilmName] = useState('') 
@@ -17,7 +14,6 @@ export const Main: React.FC = () => {
     setFilmList([...filmList, data])
     setFilmName('')
   }
-  
 
   return (
     <Container>
@@ -25,18 +21,18 @@ export const Main: React.FC = () => {
         <input 
           className='searchField' 
           type="text" 
-          placeholder='digite seu filme aqui' 
+          placeholder='digite seus filmes favoritos aqui' 
           onChange={text => setFilmName(text.target.value)}
         />
         <button onClick={() => {searchFilm()}} className='btn-search'>buscar</button>
       </header>
-      <main>
+      <MainField>
         <div className="container">
           <ul>
             { filmList.map(filme => (<Filme Plot={filme.Plot} Poster={filme.Poster} Title={filme.Title} key={filme.Poster} />)) }
           </ul>
         </div>
-      </main>
+      </MainField>
     </Container>
   )
 }

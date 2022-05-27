@@ -37,3 +37,19 @@ export const Container = styled.main`
     }
   }
 `;
+
+export const MainField = styled.main`
+  width: 100%;
+  .container{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 15px 2%;
+    ul{
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+`

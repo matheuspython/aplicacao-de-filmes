@@ -8,9 +8,12 @@ export const Global = createGlobalStyle`
 }
 html, body{
   font-family: sans-serif;
+  color: white;
 }
 body{
-  background-color: #e3dfdf;
+  background-color: #121214;
 }
-
+ul{
+  list-style: none;
+}
 `
