@@ -1,5 +1,6 @@
 import React,{ useState, useContext, FormEvent } from 'react';
 import { useNavigate } from "react-router-dom";
+import context from '../../context/loginContext'
 import { 
   Container,
   FormStyle,
@@ -8,15 +9,20 @@ import {
 } from './styles';
 
 export const MainForm: React.FC = () => {
-  const [nick, setNick] = useState('')
+  let navigate = useNavigate();
+  const { setState, state } = useContext(context)
+  const[nick, setNick] = useState('')
   const [userData, setUserData] = useState()
 
   const login = async () =>{
     const response = await fetch(`https://api.github.com/users/${nick}`)
     const data = await response.json()
-
-    setUserData(data)
-  }
+    // setUserData(data)
+    
+    setState(data.login)
+    console.log(state)
+    navigate(`/app`);
+  };
 
   return (
     <Container>

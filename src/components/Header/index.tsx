@@ -2,11 +2,17 @@ import React from 'react';
 
 import { Container } from './styles';
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  nick?: string
+}
+
+export const Header: React.FC<HeaderProps> = ({ nick }) => {
   return (
     <Container>
       <div className="container">
-        filmoes tops
+        {nick && `seja bem vindo ${nick}`}
+        {!nick && 'filmes tops'}
+
       </div>
     </Container>
   )

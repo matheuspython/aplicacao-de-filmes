@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { filmeProps } from '../../types/filmeProps';
 import { Filme } from '../Filme';
 import { Container, MainField } from './styles';

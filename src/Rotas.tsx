@@ -3,7 +3,7 @@ import {
   Route,
   Routes
 } from 'react-router-dom';
-import { UserContextProvider } from './components/context/loginContext';
+import { UserContextProvider } from './context/loginContext';
 import { FilmApp } from './pages/FilmApp'
 import { Login } from './pages/Login';
 
